@@ -44,20 +44,31 @@ body, html, #root, .App {
   gap: 32px;
   justify-content: center;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px 32px 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
 }
 
 .column {
+  flex: 1 1 320px;
+  max-width: 400px;
+  min-width: 280px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  padding: 28px 24px 24px 24px;
-  min-width: 320px;
-  max-width: 370px;
-  flex: 1 1 0;
-  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 18px 12px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .three-column-layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .column {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 0;
+  }
 }
 
 /* Login */
@@ -469,6 +480,28 @@ textarea:focus, select:focus {
   display: none;
 }
 
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 8px;
+  }
+  button, .qr-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #qr-reader {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 220px;
+  }
+}
+
 @media (max-width: 1100px) {
   .three-column-layout {
     flex-direction: column;
@@ -478,5 +511,29 @@ textarea:focus, select:focus {
   .column {
     max-width: 100%;
     min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .App-header h1 {
+    font-size: 1.3em;
+  }
+  .three-column-layout {
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .column {
+    padding: 10px 4px;
+    max-width: 100%;
+  }
+  button, input, .show-key-btn, .logout-btn {
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+  #qr-reader {
+    width: 100% !important;
+    min-height: 220px;
+    height: auto !important;
   }
 }
