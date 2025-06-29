@@ -1,6 +1,6 @@
 # Offline QR Code Messenger
 
-![Offline QR Code Messenger Screenshot](./frontend/public/Offline-messanger-qr.png)
+![Offline QR Code Messenger Screenshot](./frontend/Offline-messanger-qr.png)
 
 Send and receive encrypted messages using QR codes, completely offline — no Wi-Fi, Bluetooth, or internet required. Messages are scanned and decrypted using pre-shared keys.
 
